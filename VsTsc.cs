@@ -91,7 +91,7 @@ namespace TypeScript.Tasks
             if (match.Success)
             {
                 int num = match.Index + match.Length;
-                singleLine = singleLine.Substring(0, num).Replace('/', '\\') + string.Format(Strings.ErrorListBuildPrefix, (object)singleLine.Substring(num));
+                singleLine = singleLine.Substring(0, num).Replace('/', '\\') + string.Format("Build: {0}", (object)singleLine.Substring(num));
             }
             base.LogEventsFromTextOutput(singleLine, messageImportance);
         }
